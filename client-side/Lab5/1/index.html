@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show employee info</title>
+</head>
+<body>
+    <div class="showdata" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif"></div>
+    <script>
+        const getRemoteData = async (url) => {
+            let dataObject = await fetch(url);
+            let employees = await dataObject.json();
+            let box = document.querySelector(".showdata")
+            employees.map((index) => {
+                let data = index.ID + "). " + index.Gender + " " + index.Lastname + " " + index.Firstname + " " + index.Position + " " + index.Address
+                let createPtag = document.createElement("p")
+                let createTextNode = document.createTextNode(data)
+                createPtag.appendChild(createTextNode)
+                box.appendChild(createPtag)
+            })
+
+        }
+        getRemoteData('employee.json');
+
+        // let requestURL = 'employee.json'; 
+        // let request = new XMLHttpRequest(); 
+        // request.onreadystatechange = function () { 
+        //     if (request.readyState == 4 && request.status == 200) {             
+        //         dataDisplay(JSON.parse(request.responseText));            
+        //     } }; 
+        // request.open("GET", requestURL, true); 
+        // request.send();
+
+        // // วิธีที่ 1
+        // function dataDisplay(data) {
+        //     let info = document.querySelector(".showdata")
+        //     let headthree = document.createElement("h3")
+        //     let text = ""
+        //     for (num in data) {
+        //         text += data[num].ID += "). "
+        //         text +=  data[num].Gender += " "
+        //         text += data[num].Lastname += " "
+        //         text += data[num].Firstname += " "
+        //         text += data[num].Position += " "
+        //         text += data[num].Address += "<br>"
+        //         // let textNode = document.createTextNode(text)
+        //         // headthree.appendChild(textNode)
+        //         // info.appendChild(headthree)
+        //     }
+        //     info.innerHTML = text;
+        //     info.style.color = "green"
+        // }
+    </script>
+</body>
+</html>

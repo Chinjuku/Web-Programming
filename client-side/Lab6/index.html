@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab06/2</title>
+    <style>
+        .grid-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        img{
+            max-width: 100%;
+            height: auto;
+        }
+        @media screen and (max-width: 600px) {
+            .grid-container{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Popular cat names</h1>
+    <h3>The popularity of cat names differs by nation, even nations with the same language. The ranking of most popular cat names can be assessed, in particular, from pet insurance registrations, microchip registrations, and breed registries.</h3>
+    <h2>List of cat names</h2>
+    <div class="grid-container">
+        <div id="pic1">
+            <img src="./1.jpg" alt="" width="500" id="img1">
+        </div>
+        <div id="pic2">
+            <img src="./2.jpg" alt="" width="500">
+        </div>
+        <div id="pic3">
+            <img src="./5.jpg" alt="" width="500">
+        </div>
+        <div id="pic4">
+            <img src="./4.jpg" alt="" width="500">
+        </div>
+    </div>
+    
+</body>
+</html>

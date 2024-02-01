@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body class="w-full h-screen bg-gray-700 text-white">
+    <div class="flex relative">
+        <nav class="nav open fixed flex flex-col justify-between h-screen w-[90px] bg-[#191b21] duration-500 text-white">
+            <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+                <!-- open toggle -->
+                <div class="absolute right-[-25px] top-[20px]">
+                    <button class="toggle bg-white rounded-[50%] p-[10px]">
+                        <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                    </button>
+                </div>
+                <div class="h-[20%] w-full bg-[#191b21]">
+                    <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                    <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+                </div>
+                    <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                    </button>
+                    <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                    </button>
+                    <button onclick="window.location.href='./installation2.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                    </button>
+                    <button onclick="window.location.href='./learning1.html'" class="h-[11%] bg-black items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                    </button>
+                    <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                    </button>
+                    <button onclick="window.location.href='./managestate.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                    </button>
+            </div>
+        </nav>
+        
+        <!-- -------------- Show Info ----------------- -->
+        <div class="relative mx-[230px] bg-gray-900 h-full w-full flex flex-col min-[1650px]:mx-[300px] p-[60px] gap-[28px] pt-[150px]">
+            <div class="fixed h-[90px] max-[1700px]:left-[230px] min-[1720px]:left-[300px] bg-black w-[68%] p-5 z-index-[10000] bg-gray-900 top-0 gap-[20px] justify-center items-center flex">
+                <button onclick="window.location.href='./learning1.html'" class="w-1/5 h-[60%] rounded-xl bg-yellow-500 hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 1</button>
+                <button onclick="window.location.href='./learning2.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 2</button>
+                <button onclick="window.location.href='./learning3.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 3</button>
+                <button onclick="window.location.href='./learning4.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 4 </button>
+                <button onclick="navOpen()" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] gap-2 text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">
+                    Part 5 <img src="./svg/down.svg" width="20" alt="">
+                </button>
+            </div>
+            <div id="itemees" style="opacity: 0; height: 0;" class="fixed right-[275px] top-[66px] rounded-xl grid grid-cols-1  duration-500 w-[180px] bg-[#202127]">
+                <button onclick="window.location.href='./managestate.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 1</button>
+                <button onclick="window.location.href='./managestate2.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 2</button>
+                <button onclick="window.location.href='./yescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 1</button>
+                <button onclick="window.location.href='./zescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 2</button>
+            </div>
+            <h1 class="Createee text-3xl">Creating and nesting components</h1>
+            <p>React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.</p>
+            <div class="Learn flex justify-around p-3 pt-0 rounded-xl bg-[#25353a]">
+                <div class="w-1/2 flex flex-col items-center justify-center gap-6 p-3">
+                    <p class="Learn">React components are JavaScript functions that return markup:</p>
+                    <xmp class="p-2 w-full bg-[#202127] rounded-xl">
+    App.jsx
+
+    function MyButton() {
+        return (
+            <button>I'm a button</button>
+        );
+        }
+                    </xmp>
+                </div>
+                <div class="w-1/2 p-5 flex flex-col items-center justify-center">
+                    <xmp class="p-2 w-full bg-[#202127] rounded-xl">
+    App.jsx
+
+    export default function App() {
+        return (
+            <div>
+            <h1>Welcome to my app</h1>
+            <MyButton />
+            </div>
+        );
+        }
+                    </xmp>
+                    <p class="Create1 text-center">Now that you’ve declared MyButton, you can nest it into another component:</p>
+                </div>
+            </div>
+            <p>Notice that < MyButton /> starts with a capital letter. That’s how you know it’s a React component. React component names must always start with a capital letter, while HTML tags must be lowercase.</p>
+            <p class="">The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.</p>
+            <h1 id="Create2" class="text-3xl">Writing markup with JSX</h1>
+            <p  class="Create2">The markup syntax you’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.
+            JSX is stricter than HTML. You have to close tags like < br />. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a <br> < div>...< /div> or an empty < >...< /> wrapper:</p>
+            <xmp class="Endcreate1 p-2 w-1/2 bg-[#202127] rounded-xl">
+    AboutPage.jsx
+
+    function AboutPage() {
+        return (
+            <>
+            <h1>About</h1>
+            <p>Hello there.<br />How do you do?</p>
+            </>
+        );
+    }
+            </xmp>
+            <p>If you have a lot of HTML to port to JSX, you can use an online converter.</p>
+            <h1 id="Create3" class="Create3 text-3xl">Adding styles</h1>
+            <p>In React, you specify a CSS class with className. It works the same way as the HTML class attribute:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    <img className="avatar" />
+            </xmp>
+            <p>Then you write the CSS rules for it in a separate CSS file:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    /* In your CSS */
+    .avatar {
+        border-radius: 50%;
+    }      
+            </xmp>
+            <p>React does not prescribe how you add CSS files. In the simplest case, you’ll add a < link> tag to your HTML. If </p>
+            <h1 id="Create4" class="Create4 text-3xl">Displaying data</h1>
+            <p>JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    return (
+        <h1>
+            {user.name}
+        </h1>
+    );
+            </xmp>
+            <p>You can also “escape into JavaScript” from JSX attributes, but you have to use curly braces instead of quotes. For example, className="avatar" passes the "avatar" string as the CSS class, but src={user.imageUrl} reads the JavaScript user.imageUrl variable value, and then passes that value as the src attribute:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    return (
+    <img
+        className="avatar"
+        src={user.imageUrl}
+    />
+    );
+            </xmp>
+            <p>You can put more complex expressions inside the JSX curly braces too, for example, string concatenation:</p>
+            <div class="flex">
+                <xmp class="p-2 overflow-scroll h-[300px] w-1/2 bg-[#202127] rounded-xl">
+    Profile.jsx
+
+    const user = {
+        name: 'Hedy Lamarr',
+        imageUrl: 'https://i.imgur.com/yXOvdOSs.jpg',
+        imageSize: 90,
+        };
+        
+        export default function Profile() {
+        return (
+            <>
+            <h1>{user.name}</h1>
+            <img
+                className="avatar"
+                src={user.imageUrl}
+                alt={'Photo of ' + user.name}
+                style={{
+                width: user.imageSize,
+                height: user.imageSize
+                }}
+            />
+            </>
+        );
+        }
+            </xmp>
+            <div class="w-1/2 p-[20px]">
+                <p class="text-xl mb-3">Result</p>
+                <img src="./pic/Screenshot 2024-01-31 011311.png" alt="">
+            </div>
+            </div>
+            <p>In the above example, style={{}} is not a special syntax, but a regular {} object inside the style={ } JSX curly braces. You can use the style attribute when your styles depend on JavaScript variables.</p>
+            <h1 id="Create5" class="Create5 text-3xl">Responding to events</h1>
+            <p>You can respond to events by declaring event handler functions inside your components:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    function MyButton() {
+        function handleClick() {
+            alert('You clicked me!');
+        }
+        
+        return (
+            <button onClick={handleClick}>
+            Click me
+            </button>
+        );
+        }
+            </xmp>
+            <p>Notice how onClick={handleClick} has no parentheses at the end! Do not call the event handler function: you only need to pass it down. React will call your event handler when the user clicks the button.</p>
+
+            <div class="w-full justify-between flex">
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./installation2.html'">PREV</button>
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./learning2.html'">NEXT</button>
+            </div>
+        </div>
+        <div class="fixed w-[140px] bg-[#191b21] right-0 h-screen">
+            <div class="opacity-100 text-xl h-[15%] flex flex-col items-center p-[20px] bg-gray-800">Click to show Topics
+                <div class="flex justify-center w-full">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                </div>
+            </div>
+            <button onclick="scrollingTo('Createee')" class="Content1 text-start opacity-100 text-xl h-[15%] flex items-center p-[20px] bg-violet-600">Creating and nesting components</button>
+            <button onclick="scrollingTo('Create2')" class="Content2 text-start opacity-[0.25] text-xl h-[15%] bg-blue-600 flex items-center p-[20px]">Writing markup with JSX</button>
+            <button onclick="scrollingTo('Create3')" class="Content3 text-start opacity-[0.25] text-xl h-[15%] bg-green-900 flex items-center p-[20px]">Adding Styles</button>
+            <button onclick="scrollingTo('Create4')" class="Content4 text-start opacity-[0.25] text-xl h-[15%] bg-yellow-400 flex items-center p-[20px]">Displaying Data</button>
+            <button onclick="scrollingTo('Create5')" class="Content5 text-start opacity-[0.25] text-xl h-[15%] bg-yellow-600 flex items-center p-[20px]">Responding to events</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: candy;
+    src: url(EmilysCandy-Regular.ttf);
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    font-family: candy;
+}
+.another {
+    color: red;
+}
+table, th, td {
+    border-collapse: collapse;
+    border: 1px black solid;
+    font-size: 32px;
+    text-align: center;
+}
+th, td {
+    padding: 20px;
+}

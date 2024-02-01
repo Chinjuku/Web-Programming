@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Demo</title>
+</head>
+<body>
+    <div id="box">
+        <h1>Quiz 1</h1>
+        <form id="form" action="" name="quiz" style="display: flex; flex-direction: column; font-family: Verdana, Geneva, Tahoma, sans-serif; gap: 10px;">
+            
+        </form>
+    </div>
+    <script>
+        let requestURL = "questionAnswerData.json"
+        let request = new XMLHttpRequest(); 
+        request.onreadystatechange = () => { 
+            if (request.readyState == 4 && request.status == 200) {             
+                dataDisplay(JSON.parse(request.responseText));            
+            } }; 
+        request.open("GET", requestURL, true); 
+        request.send();
+
+        const dataDisplay = (data) => {
+            // let form = document.forms.quiz 
+            let box = document.getElementById("box")
+            data.forEach((item, index) => {
+                //Create question Node
+                let headthree = document.createElement("h3")
+                let h3Node = document.createTextNode(index+1 + ". " + item.question)
+                headthree.appendChild(h3Node)
+                form.appendChild(headthree)
+
+                //Create answer Node
+                choiceABC(item.answers.a, index, "a")
+                choiceABC(item.answers.b, index, "b")
+                choiceABC(item.answers.c, index, "c")
+                console.log(item.answers, index)
+            })
+        };
+
+        const choiceABC = (data, index, value) => {         // Answer choice a as example
+            const form = document.getElementById("form")
+            let radio = document.createElement("input")     // let radioA = document.createElement("input")
+            radio.type = "radio"                            // radioA.type = "radio"
+            radio.value = value                             // radioA.value = "a"
+            radio.name = "answer" + index                   // radioA.name = "answer" + index
+            let label = document.createElement("label")     // let labelA = document.createElement("label")
+            let labelNode = document.createTextNode(data)   // let labelNodeA = document.createTextNode(item.answers.a)
+            label.appendChild(radio)                        // labelA.appendChild(radioA)
+            label.appendChild(labelNode)                    // labelA.appendChild(labelNodeA)
+            form.appendChild(label)                         // form.appendChild(labelA)
+        };
+        
+    </script>
+</body>
+</html>

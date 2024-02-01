@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Respon2</title>
+    <style>
+        @media screen and (max-width: 600px) {
+            .boxox {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body class="flex flex-col justify-center items-center">
+    <h1 class="text-center text-6xl">List of model</h1>
+    <div class="boxox grid grid-cols-2 w-2/3 h-1/2">
+        <div class="w-full flex flex-col items-center justify-center bg-red-200" style="height: 250px;">
+            <img src="akihabara.jpg" width="140" class="h-2/3" alt="">
+            <p class="text-xl mt-3">Akibara</p>
+        </div>
+        <div class="w-full flex flex-col items-center justify-center bg-red-300" style="height: 250px;">
+            <img src="dimoo.jpg" width="140" class="h-2/3" alt="">
+            <p class="text-xl mt-3">Dimoo</p>
+        </div>
+        <div class="w-full flex flex-col items-center justify-center bg-red-400" style="height: 250px;">
+            <img src="kubo.jpg" width="140" class="h-2/3" alt="">
+            <p class="text-xl mt-3">Kubo</p>
+        </div>
+        <div class="w-full flex flex-col items-center justify-center bg-red-500" style="height: 250px;">
+            <img src="skullpanda.jpg" width="140" class="h-2/3" alt="">
+            <p class="text-xl mt-3">Skull Panda</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <style>h1 {font-size: 36px;}</style>
+</head>
+<body class="w-full h-screen bg-gray-700 text-white">
+    <div class="flex">
+        <nav class="nav open fixed flex flex-col justify-between h-screen w-[90px] bg-[#191b21] duration-500 text-white">
+            <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+                <!-- open toggle -->
+                <div class="absolute right-[-25px] top-[20px]">
+                    <button class="toggle bg-white rounded-[50%] p-[10px]">
+                        <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                    </button>
+                </div>
+                <div class="h-[20%] w-full bg-[#191b21]">
+                    <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                    <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+                </div>
+                    <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                    </button>
+                    <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                    </button>
+                    <button onclick="window.location.href='./installation2.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                    </button>
+                    <button onclick="window.location.href='./learning1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                    </button>
+                    <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                    </button>
+                    <button onclick="window.location.href='./managestate.html'" class="h-[11%] bg-black items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                    </button>
+            </div>
+        </nav>
+        <!-- -------------- Show Info ----------------- -->
+        <div class="mx-[230px] bg-gray-900 h-full w-full flex flex-col min-[1660px]:mx-[300px] p-[60px] pt-[150px] gap-[20px]">
+            <div class="fixed h-[90px] max-[1700px]:left-[230px] min-[1720px]:left-[300px] bg-black w-[68%] p-5 z-index-[10000] bg-gray-900 top-0 gap-[20px] justify-center items-center flex">
+                <button onclick="window.location.href='./learning1.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 1</button>
+                <button onclick="window.location.href='./learning2.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 2</button>
+                <button onclick="window.location.href='./learning3.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 3</button>
+                <button onclick="window.location.href='./learning4.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 4 </button>
+                <button onclick="navOpen()" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] bg-yellow-500 gap-2 text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">
+                    Part 5 <img src="./svg/down.svg" width="20" alt="">
+                </button>
+            </div>
+            <div id="itemees" style="opacity: 0; height: 0;" class="fixed right-[275px] top-[66px] rounded-xl grid grid-cols-1  duration-500 w-[180px] bg-[#202127]">
+                <button onclick="window.location.href='./managestate.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 1</button>
+                <button onclick="window.location.href='./managestate2.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 2</button>
+                <button onclick="window.location.href='./yescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 1</button>
+                <button onclick="window.location.href='./zescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 2</button>
+            </div>
+            <h1 class="text-3xl">Escape Hatches</h1>
+            <p>Some of your components may need to control and synchronize with systems outside of React. For example, you might need to focus an input using the browser API, play and pause a video player implemented without React, or connect and listen to messages from a remote server. In this chapter, you’ll learn the escape hatches that let you “step outside” React and connect to external systems. Most of your application logic and data flow should not rely on these features.</p>
+            <h1 class="text-3xl">Referencing values with refs</h1>
+            <p>When you want a component to “remember” some information, but you don’t want that information to trigger new renders, you can use a ref:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    const ref = useRef(0);
+            </xmp>
+            <p>Like state, refs are retained by React between re-renders. However, setting state re-renders a component. Changing a ref does not! You can access the current value of that ref through the ref.current property.</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    import { useRef } from 'react';
+
+    export default function Counter() {
+        let ref = useRef(0);
+    
+        function handleClick() {
+        ref.current = ref.current + 1;
+        alert('You clicked ' + ref.current + ' times!');
+        }
+    
+        return (
+        <button onClick={handleClick}>
+            Click me!
+        </button>
+        );
+    }
+            </xmp>
+            <p>A ref is like a secret pocket of your component that React doesn’t track. For example, you can use refs to store timeout IDs, DOM elements, and other objects that don’t impact the component’s rendering output.</p>
+            <h1 class="text-3xl">Manipulating the DOM with refs</h1>
+            <p>React automatically updates the DOM to match your render output, so your components won’t often need to manipulate it. However, sometimes you might need access to the DOM elements managed by React—for example, to focus a node, scroll to it, or measure its size and position. There is no built-in way to do those things in React, so you will need a ref to the DOM node. For example, clicking the button will focus the input using a ref:</p>
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    import { useRef } from 'react';
+
+    export default function Form() {
+    const inputRef = useRef(null);
+
+    function handleClick() {
+        inputRef.current.focus();
+    }
+
+    return (
+        <>
+        <input ref={inputRef} />
+        <button onClick={handleClick}>
+            Focus the input
+        </button>
+        </>
+    );
+    }
+            </xmp>
+            <h1 class="text-3xl">Synchronizing with Effects </h1>
+            <xmp class="p-2 w-1/2 bg-[#202127] h-[300px] overflow-scroll rounded-xl">
+    import { useState, useRef, useEffect } from 'react';
+
+    function VideoPlayer({ src, isPlaying }) {
+    const ref = useRef(null);
+
+    useEffect(() => {
+        if (isPlaying) {
+        ref.current.play();
+        } else {
+        ref.current.pause();
+        }
+    }, [isPlaying]);
+
+    return <video ref={ref} src={src} loop playsInline />;
+    }
+
+    export default function App() {
+    const [isPlaying, setIsPlaying] = useState(false);
+    return (
+        <>
+        <button onClick={() => setIsPlaying(!isPlaying)}>
+            {isPlaying ? 'Pause' : 'Play'}
+        </button>
+        <VideoPlayer
+            isPlaying={isPlaying}
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+        />
+        </>
+    );
+    }
+
+            </xmp>
+            <h1 class="text-3xl">You Might Not Need An Effect</h1>
+            <p>Effects are an escape hatch from the React paradigm. They let you “step outside” of React and synchronize your components with some external system. If there is no external system involved (for example, if you want to update a component’s state when some props or state change), you shouldn’t need an Effect. Removing unnecessary Effects will make your code easier to follow, faster to run, and less error-prone.</p>
+            <p>There are two common cases in which you don’t need Effects: <br>
+
+                1.You don’t need Effects to transform data for rendering. <br>
+                2.You don’t need Effects to handle user events. <br>
+                For example, you don’t need an Effect to adjust some state based on other state:</p>
+                <div class="flex gap-6">
+                    <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    function Form() {
+        const [firstName, setFirstName] = useState('Taylor');
+        const [lastName, setLastName] = useState('Swift');
+        
+        // 🔴 Avoid: redundant state and unnecessary Effect
+        const [fullName, setFullName] = useState('');
+        useEffect(() => {
+            setFullName(firstName + ' ' + lastName);
+        }, [firstName, lastName]);
+        // ...
+        }
+                </xmp>
+                <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    function Form() {
+        const [firstName, setFirstName] = useState('Taylor');
+        const [lastName, setLastName] = useState('Swift');
+        // ✅ Good: calculated during rendering
+        const fullName = firstName + ' ' + lastName;
+        // ...
+        }
+                    </xmp>
+                </div>
+            <div class="w-full justify-between flex">
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./managestate2.html'">PREV</button>
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./zescapehatch.html'">NEXT</button>
+            </div>
+        </div>
+        <!-- <div class="fixed w-[140px] bg-[#191b21] right-0 h-screen">
+            <div class="opacity-100 text-xl h-[15%] flex flex-col items-center p-[20px] bg-gray-800">Click to show Topics
+                <div class="flex justify-center w-full">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                </div>
+            </div>
+            <button onclick="scrollingTo('Create2')" class="Content2 opacity-100 text-xl h-[15%] flex items-center p-[20px] bg-violet-600">Managing State</button>
+            <button onclick="scrollingTo('Create3')" class="Content3 opacity-[.25] text-xl h-[15%] bg-green-800 flex items-center p-[20px]">Extracting state logic into a reducer</button>
+            <button onclick="scrollingTo('Create5')" class="Content5 opacity-[.25] text-xl h-[15%] bg-yellow-600 flex items-center p-[20px]">Passing data deeply with context</button>
+        </div> -->
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>

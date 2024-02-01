@@ -1,0 +1,61 @@
+/* import font in project */
+@font-face {
+    font-family: notoSerif;
+    src: url("./fonts/Noto_Serif/NotoSerif-VariableFont_wdth\,wght.ttf");
+}
+body {
+    font-family: notoSerif;
+}
+/* toggle open navbar */
+.nav.close {
+    width: 200px;
+    transition: width 0.5s;
+}
+.nav.close .texthere{
+    opacity: 1;
+    transition: opacity 0.5;
+}
+.nav.close .toggles {
+    background-image: url("../svg/close.svg");
+    background-size: cover;
+}
+/* item close */
+.toggles {
+    background-image: url("../svg/open.svg");
+    background-size: cover;
+}
+
+@media screen and (min-width: 1660px) {
+    .nav.close {
+        width: 240px;
+    }
+}
+/* Installing2 */
+.askbox.open .showbox{
+    opacity: 10000;
+    transition: opacity 0.5;
+}
+.askbox.open {
+    height: 400px;
+    transition: width 0.5;
+}
+p {
+    font-size: 20px;
+}
+/* Part 5 (Open Nav) */
+.navstate.open .itemees{
+    opacity: 10000;
+    transition: opacity 0.5;
+}
+.navstate.open {
+    height: 400px;
+    transition: width 0.5;
+}
+/* Content Learning Page */
+.Content1, .Content2, .Content3, .Content4, .Content5 {
+    font-weight: bold;
+    stroke: black 1px;
+}
+
+
+

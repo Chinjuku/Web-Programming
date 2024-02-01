@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: grid;
+            place-items: center;
+            height: 100vh;
+        }
+        .mypets {
+            width: 1000px;
+            height: 500px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 40px;
+            /* background-color: green; */
+        }
+        .petss{
+            width: 100%;
+            height: 100%;
+            padding: 10px;
+            background-color: rgb(117, 117, 205);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+            width: 200px;
+            height: 160px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mypets">
+        <div class="petss">
+            <h2>Chicken</h2>
+            <img src="./chicken.jpg" alt="">
+        </div>
+        <div class="petss">
+            <h2>Cat</h2>
+            <img src="./cat.jpg" alt="">
+        </div>
+        <div class="petss">
+            <h2>Zebra</h2>
+            <img src="./zebra.jpg" alt="">
+        </div>
+        <div class="petss">
+            <h2>Coala</h2>
+            <img src="./coala.jpg" alt="">
+        </div>
+        <div class="petss">
+            <h2>Bird</h2>
+            <img src="./birdjpg.jpg" alt="">
+        </div>
+        <div class="petss">
+            <h2>Dog</h2>
+            <img src="./Dog.jpg" alt="">
+        </div>
+        
+    </div>
+</body>
+</html>

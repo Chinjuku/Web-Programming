@@ -1,0 +1,22 @@
+.bigbox {
+    width: 600px;
+}
+.box{
+    width: 10%;
+    height: 50px;
+    padding: 10px 20px; 
+    margin-top: 20px;
+    border: black solid 1px;
+    align-items: center;
+    display: flex;
+}
+button {
+    padding: 10px 20px;
+    background-color: aquamarine;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+button:active {
+    scale: 0.8;
+    transition: 1s;
+}

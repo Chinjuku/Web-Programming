@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+    <style>h1 {font-size: 36px;}</style>
+</head>
+<body class="w-full h-screen bg-gray-700 text-white">
+    <div class="flex">
+        <nav class="nav open fixed flex flex-col justify-between h-screen w-[90px] bg-[#191b21] duration-500 text-white">
+            <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+                <!-- open toggle -->
+                <div class="absolute right-[-25px] top-[20px]">
+                    <button class="toggle bg-white rounded-[50%] p-[10px]">
+                        <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                    </button>
+                </div>
+                <div class="h-[20%] w-full bg-[#191b21]">
+                    <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                    <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+                </div>
+                    <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                    </button>
+                    <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                    </button>
+                    <button onclick="window.location.href='./installation2.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                    </button>
+                    <button onclick="window.location.href='./learning1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                    </button>
+                    <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                    </button>
+                    <button onclick="window.location.href='./managestate.html'" class="h-[11%] bg-black items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                    </button>
+            </div>
+        </nav>
+        <!-- -------------- Show Info ----------------- -->
+        <div class="mx-[230px] bg-gray-900 h-full w-full flex flex-col min-[1660px]:mx-[300px] p-[60px] pt-[150px] gap-[20px]">
+            <div class="fixed h-[90px] max-[1700px]:left-[230px] min-[1720px]:left-[300px] bg-black w-[68%] p-5 z-index-[10000] bg-gray-900 top-0 gap-[20px] justify-center items-center flex">
+                <button onclick="window.location.href='./learning1.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 1</button>
+                <button onclick="window.location.href='./learning2.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 2</button>
+                <button onclick="window.location.href='./learning3.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 3</button>
+                <button onclick="window.location.href='./learning4.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 4 </button>
+                <button onclick="navOpen()" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] bg-yellow-500 gap-2 text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">
+                    Part 5 <img src="./svg/down.svg" width="20" alt="">
+                </button>
+            </div>
+            <div id="itemees" style="opacity: 0; height: 0;" class="fixed right-[275px] top-[66px] rounded-xl grid grid-cols-1  duration-500 w-[180px] bg-[#202127]">
+                <button onclick="window.location.href='./managestate.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 1</button>
+                <button onclick="window.location.href='./managestate2.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 2</button>
+                <button onclick="window.location.href='./yescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 1</button>
+                <button onclick="window.location.href='./zescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 2</button>
+            </div>
+            <h1 class="Create1 text-3xl">Preserving and resetting state</h1>
+            <p>When you re-render a component, React needs to decide which parts of the tree to keep (and update), and which parts to discard or re-create from scratch. In most cases, React’s automatic behavior works well enough. By default, React preserves the parts of the tree that “match up” with the previously rendered component tree.</p>
+            <p>However, sometimes this is not what you want. In this chat app, typing a message and then switching the recipient does not reset the input. This can make the user accidentally send a message to the wrong person:</p>
+            <xmp class="p-2 h-[300px] overflow-scroll w-1/2 bg-[#202127] rounded-xl">
+    import { useState } from 'react';
+    import Chat from './Chat.js';
+    import ContactList from './ContactList.js';
+
+    export default function Messenger() {
+    const [to, setTo] = useState(contacts[0]);
+    return (
+        <div>
+        <ContactList
+            contacts={contacts}
+            selectedContact={to}
+            onSelect={contact => setTo(contact)}
+        />
+        <Chat contact={to} />
+        </div>
+    )
+    }
+
+    const contacts = [
+    { name: 'Taylor', email: 'taylor@mail.com' },
+    { name: 'Alice', email: 'alice@mail.com' },
+    { name: 'Bob', email: 'bob@mail.com' }
+    ];
+            </xmp>
+            <p>React lets you override the default behavior, and force a component to reset its state by passing it a different key, like < Chat key={email} />. This tells React that if the recipient is different, it should be considered a different Chat component that needs to be re-created from scratch with the new data (and UI like inputs). Now switching between the recipients resets the input field—even though you render the same component.</p>
+            <xmp class="p-2 h-[300px] overflow-scroll w-1/2 bg-[#202127] rounded-xl">
+    import { useState } from 'react';
+    import Chat from './Chat.js';
+    import ContactList from './ContactList.js';
+
+    export default function Messenger() {
+    const [to, setTo] = useState(contacts[0]);
+    return (
+        <div>
+        <ContactList
+            contacts={contacts}
+            selectedContact={to}
+            onSelect={contact => setTo(contact)}
+        />
+        <Chat key={to.email} contact={to} />
+        </div>
+    )
+    }
+
+    const contacts = [
+    { name: 'Taylor', email: 'taylor@mail.com' },
+    { name: 'Alice', email: 'alice@mail.com' },
+    { name: 'Bob', email: 'bob@mail.com' }
+    ];
+
+            </xmp>
+            <h1 class="Create3 text-3xl">Extracting state logic into a reducer </h1>
+            <p>Components with many state updates spread across many event handlers can get overwhelming. For these cases, you can consolidate all the state update logic outside your component in a single function, called “reducer”. Your event handlers become concise because they only specify the user “actions”. At the bottom of the file, the reducer function specifies how the state should update in response to each action!</p>
+            <xmp class="p-2 h-[500px] overflow-scroll w-1/2 bg-[#202127] rounded-xl">
+    import { useReducer } from 'react';
+    import AddTask from './AddTask.js';
+    import TaskList from './TaskList.js';
+
+    export default function TaskApp() {
+    const [tasks, dispatch] = useReducer(
+        tasksReducer,
+        initialTasks
+    );
+
+    function handleAddTask(text) {
+        dispatch({
+        type: 'added',
+        id: nextId++,
+        text: text,
+        });
+    }
+
+    function handleChangeTask(task) {
+        dispatch({
+        type: 'changed',
+        task: task
+        });
+    }
+
+    function handleDeleteTask(taskId) {
+        dispatch({
+        type: 'deleted',
+        id: taskId
+        });
+    }
+
+    return (
+        <>
+        <h1>Prague itinerary</h1>
+        <AddTask
+            onAddTask={handleAddTask}
+        />
+        <TaskList
+            tasks={tasks}
+            onChangeTask={handleChangeTask}
+            onDeleteTask={handleDeleteTask}
+        />
+        </>
+    );
+    }
+
+    function tasksReducer(tasks, action) {
+    switch (action.type) {
+        case 'added': {
+        return [...tasks, {
+            id: action.id,
+            text: action.text,
+            done: false
+        }];
+        }
+        case 'changed': {
+        return tasks.map(t => {
+            if (t.id === action.task.id) {
+            return action.task;
+            } else {
+            return t;
+            }
+        });
+        }
+        case 'deleted': {
+        return tasks.filter(t => t.id !== action.id);
+        }
+        default: {
+        throw Error('Unknown action: ' + action.type);
+        }
+    }
+    }
+
+    let nextId = 3;
+    const initialTasks = [
+    { id: 0, text: 'Visit Kafka Museum', done: true },
+    { id: 1, text: 'Watch a puppet show', done: false },
+    { id: 2, text: 'Lennon Wall pic', done: false }
+    ];
+            </xmp>
+            <h1 class="Create4 text-3xl">Passing data deeply with context</h1>
+            <p>Usually, you will pass information from a parent component to a child component via props. But passing props can become inconvenient if you need to pass some prop through many components, or if many components need the same information. Context lets the parent component make some information available to any component in the tree below it—no matter how deep it is—without passing it explicitly through props.
+
+                Here, the Heading component determines its heading level by “asking” the closest Section for its level. Each Section tracks its own level by asking the parent Section and adding one to it. Every Section provides information to all components below it without passing props—it does that through context.</p>
+                <xmp class="p-2 h-[300px] overflow-scroll w-1/2 bg-[#202127] rounded-xl">
+    import Heading from './Heading.js';
+    import Section from './Section.js';
+    
+    export default function Page() {
+        return (
+        <Section>
+            <Heading>Title</Heading>
+            <Section>
+            <Heading>Heading</Heading>
+            <Heading>Heading</Heading>
+            <Heading>Heading</Heading>
+            <Section>
+                <Heading>Sub-heading</Heading>
+                <Heading>Sub-heading</Heading>
+                <Heading>Sub-heading</Heading>
+                <Section>
+                <Heading>Sub-sub-heading</Heading>
+                <Heading>Sub-sub-heading</Heading>
+                <Heading>Sub-sub-heading</Heading>
+                </Section>
+            </Section>
+            </Section>
+        </Section>
+        );
+    }
+            </xmp>
+            <h1 class="Create5 text-3xl">Scaling up with reducer and context</h1>
+            <p>Reducers let you consolidate a component’s state update logic. Context lets you pass information deep down to other components. You can combine reducers and context together to manage state of a complex screen.
+                With this approach, a parent component with complex state manages it with a reducer. Other components anywhere deep in the tree can read its state via context. They can also dispatch actions to update that state.</p> 
+            <div class="grid gap-6 grid-cols-2">
+            <xmp class="p-2 h-[300px] overflow-scroll w-full bg-[#202127] rounded-xl">
+    App.js
+
+    import AddTask from './AddTask.js';
+    import TaskList from './TaskList.js';
+    import { TasksProvider } from './TasksContext.js';
+
+    export default function TaskApp() {
+    return (
+        <TasksProvider>
+        <h1>Day off in Kyoto</h1>
+        <AddTask />
+        <TaskList />
+        </TasksProvider>
+    );
+    }
+
+            </xmp>
+            <xmp class="p-2 h-[300px] overflow-scroll w-full bg-[#202127] rounded-xl">
+    TasksContext.js
+
+    import { createContext, useContext, useReducer } from 'react';
+
+    const TasksContext = createContext(null);
+    const TasksDispatchContext = createContext(null);
+
+    export function TasksProvider({ children }) {
+    const [tasks, dispatch] = useReducer(
+        tasksReducer,
+        initialTasks
+    );
+
+    return (
+        <TasksContext.Provider value={tasks}>
+        <TasksDispatchContext.Provider
+            value={dispatch}
+        >
+            {children}
+        </TasksDispatchContext.Provider>
+        </TasksContext.Provider>
+    );
+    }
+
+    export function useTasks() {
+    return useContext(TasksContext);
+    }
+
+    export function useTasksDispatch() {
+    return useContext(TasksDispatchContext);
+    }
+
+    function tasksReducer(tasks, action) {
+    switch (action.type) {
+        case 'added': {
+        return [...tasks, {
+            id: action.id,
+            text: action.text,
+            done: false
+        }];
+        }
+        case 'changed': {
+        return tasks.map(t => {
+            if (t.id === action.task.id) {
+            return action.task;
+            } else {
+            return t;
+            }
+        });
+        }
+        case 'deleted': {
+        return tasks.filter(t => t.id !== action.id);
+        }
+        default: {
+        throw Error('Unknown action: ' + action.type);
+        }
+    }
+    }
+
+    const initialTasks = [
+    { id: 0, text: 'Philosopher’s Path', done: true },
+    { id: 1, text: 'Visit the temple', done: false },
+    { id: 2, text: 'Drink matcha', done: false }
+    ];
+            </xmp>
+            <xmp class="p-2 h-[300px] overflow-scroll w-full bg-[#202127] rounded-xl">
+    AddTask.js
+
+    import { useState, useContext } from 'react';
+    import { useTasksDispatch } from './TasksContext.js';
+
+    export default function AddTask({ onAddTask }) {
+    const [text, setText] = useState('');
+    const dispatch = useTasksDispatch();
+    return (
+        <>
+        <input
+            placeholder="Add task"
+            value={text}
+            onChange={e => setText(e.target.value)}
+        />
+        <button onClick={() => {
+            setText('');
+            dispatch({
+            type: 'added',
+            id: nextId++,
+            text: text,
+            });
+        }}>Add</button>
+        </>
+    );
+    }
+
+    let nextId = 3;
+
+            </xmp>
+            <xmp class="p-2 h-[300px] overflow-scroll w-full bg-[#202127] rounded-xl">
+    TaskList.js
+
+    import { useState, useContext } from 'react';
+    import { useTasks, useTasksDispatch } from './TasksContext.js';
+    
+    export default function TaskList() {
+      const tasks = useTasks();
+      return (
+        <ul>
+          {tasks.map(task => (
+            <li key={task.id}>
+              <Task task={task} />
+            </li>
+          ))}
+        </ul>
+      );
+    }
+    
+    function Task({ task }) {
+      const [isEditing, setIsEditing] = useState(false);
+      const dispatch = useTasksDispatch();
+      let taskContent;
+      if (isEditing) {
+        taskContent = (
+          <>
+            <input
+              value={task.text}
+              onChange={e => {
+                dispatch({
+                  type: 'changed',
+                  task: {
+                    ...task,
+                    text: e.target.value
+                  }
+                });
+              }} />
+            <button onClick={() => setIsEditing(false)}>
+              Save
+            </button>
+          </>
+        );
+      } else {
+        taskContent = (
+          <>
+            {task.text}
+            <button onClick={() => setIsEditing(true)}>
+              Edit
+            </button>
+          </>
+        );
+      }
+      return (
+        <label>
+          <input
+            type="checkbox"
+            checked={task.done}
+            onChange={e => {
+              dispatch({
+                type: 'changed',
+                task: {
+                  ...task,
+                  done: e.target.checked
+                }
+              });
+            }}
+          />
+          {taskContent}
+          <button onClick={() => {
+            dispatch({
+              type: 'deleted',
+              id: task.id
+            });
+          }}>
+            Delete
+          </button>
+        </label>
+      );
+    }
+            </xmp>
+            </div>
+
+            <div class="w-full justify-between flex">
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./managestate.html'">PREV</button>
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./yescapehatch.html'">NEXT</button>
+            </div>
+        </div>
+        <div class="fixed w-[140px] bg-[#191b21] right-0 h-screen">
+            <div class="opacity-100 text-xl h-[15%] flex flex-col items-center p-[20px] bg-gray-800">Click to show Topics
+                <div class="flex justify-center w-full">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                </div>
+            </div>
+            <button onclick="scrollingTo('Create1')" class="Content1 text-start opacity-100 text-xl h-[15%] flex items-center p-[20px] bg-violet-600">Preserving and resetting state</button>
+            <button onclick="scrollingTo('Create3')" class="Content3 text-start opacity-[.25] text-xl h-[15%] bg-green-800 flex items-center p-[20px]">Extracting state logic into a reducer</button>
+            <button onclick="scrollingTo('Create4')" class="Content4 text-start opacity-[.25] text-xl h-[15%] bg-yellow-600 flex items-center p-[20px]">Passing data deeply with context</button>
+            <button onclick="scrollingTo('Create5')" class="Content5 text-start opacity-[.25] text-xl h-[15%] bg-red-600 flex items-center p-[20px]">Scaling up with reducer and context</button>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>

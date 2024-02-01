@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(bg.jpg);
+            background-size: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box{
+            width: 350px;
+            gap: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        .bb{
+            background-color: aqua;
+        }
+        .p{
+            opacity: 0;
+        }
+        p {
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="swap()">
+        <img id="1" src="1.png" alt="">
+        <img id="2" src="2.png" alt="">
+        <img id="3" src="3.png" alt="">
+        <img id="4" src="4.png" alt="">
+    </div>
+    <p class="p">Move!!!</p><p id="p1"></p>
+    <button onclick="swap()" style="padding: 10px 20px; border-radius: 10px; background-color: aqua;">MOVE images</button>
+    <script src="app.js"></script>
+</body>
+</html>

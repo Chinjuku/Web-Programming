@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/reactanimate.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <title>Document</title>
+    <style>
+        nav {
+            position: fixed;
+        }
+    </style>
+</head>
+<body class="w-full h-full bg-gray-700 text-white">
+    <!-- syntax html => ( nav>div*5.list$ )-->
+    <nav class="nav open fixed flex flex-col justify-between h-full w-[90px] bg-gray-900 duration-500 text-white">
+        <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+            <!-- open toggle -->
+            <div class="absolute right-[-25px] top-[20px]">
+                <button class="toggle bg-white rounded-[50%] p-[10px]">
+                    <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                </button>
+            </div>
+            <div class="h-[20%] w-full bg-[#191b21]">
+                <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+            </div>
+                <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full bg-black hover:bg-[#23272f] active:bg-[#23272f]">
+                    <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                </button>
+                <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                    <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                </button>
+                <button onclick="window.location.href='./installation2.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                    <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                </button>
+                <button onclick="window.location.href='./learning1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                    <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                </button>
+                <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                    <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                </button>
+                <button onclick="window.location.href='./managestate.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                    <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                    <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                </button>
+        </div>
+    </nav>
+    <div class="flex">
+        
+        <!-- Show React Rotate -->
+        <div class="overflow-hidden closeee mx-[230px] h-[1800px] min-[1660px]:h-[2000px] w-full relative flex justify-center items-center flex-col min-[1520px]:mx-[300px]">
+            <div class="boxa h-[1000px] w-full flex justify-center items-center bg-gray-900">
+                <img class="logo absolute top-[230px] left-[150px]" src="./pic/react.png" width="300" alt="">
+                <h1 class="comment1 absolute top-[310px] right-[260px] text-6xl font-bold">React</h1>
+                <h2 class="comment2 absolute top-[390px] right-[190px] text-center text-2xl">The library for web and native <br> user interfaces</h2>
+                <div class="top-[580px] absolute gap-[30px] flex">
+                    <button onclick="window.location.href = './learning1.html'" class="bg-[#087ea4] hover:bg-blue-800 duration-300 active:scale-[0.95] text-xl py-[15px] px-[15px] w-[220px] rounded-xl">Learn React</button>
+                    <button onclick="window.location.href = './installation1.html'" class="duration-300 active:scale-[0.95] hover:bg-white hover:text-[#23272f] text-xl py-[15px] px-[15px] w-[220px] rounded-xl border-2 border-white">Installation</button>
+                </div>
+                <div class="absolute top-[720px]">
+                    <h1 class="scroll text-3xl">Scroll down to show more</h1>
+                    <div class="flex justify-center w-full">
+                        <img src="./svg/down.svg" width="40" alt="">
+                        <img src="./svg/down.svg" width="40" alt="">
+                        <img src="./svg/down.svg" width="40" alt="">
+                    </div>
+                </div>
+    
+            </div>
+
+            <div class="h-[800px] min-[1660px]:h-[1000px] flex relative w-full flex-col justify-center items-center bg-gray-800">
+                <h1 class="advantage absolute top-[80px] text-4xl">Advantages of React</h1>
+                <div class="Box6 grid grid-cols-2 absolute top-[150px] h-[450px] w-[70%] bg-transparent gap-4 top-[1000px]">
+                    <div class="h-full w-full bg-[#202127] rounded-xl p-[25px]">
+                        <h1 class="text-xl text-[#087ea4] font-bold mb-[15px]">Create user interfaces from components</h1>
+                        <p class="text-sm">React lets you build user interfaces out of individual pieces called components. Create your own React components like Thumbnail, LikeButton, 
+                            and Video. Then combine them into entire screens, pages, and apps.</p>
+                    </div>
+                    <div class="h-full w-full bg-[#202127] rounded-xl p-[25px]">
+                        <h1 class="text-xl text-[#087ea4] font-bold mb-[15px]">Write components with code and markup</h1>
+                        <p class="text-sm">React components are JavaScript functions. Want to show some content conditionally? Use an if statement. Displaying a list? Try array map(). Learning React is learning programming.</p>
+                    </div>
+                    <div class="h-full w-full bg-[#202127] rounded-xl p-[25px]">
+                        <h1 class="text-xl text-[#087ea4] font-bold mb-[15px]">Add interactivity wherever you need it</h1>
+                        <p class="text-sm">React components receive data and return what should appear on the screen. You can pass them new data in response to an interaction, like when the user types into an input. React will then update the screen to match the new data.</p>
+                    </div>
+                    <div class="h-full w-full bg-[#202127] rounded-xl p-[25px]">
+                        <h1 class="text-xl text-[#087ea4] font-bold mb-[15px]">Go full-stack
+                            with a framework</h1>
+                        <p class="text-sm">React is a library. It lets you put components together, but it doesn’t prescribe how to do routing and data fetching. To build an entire app with React, we recommend a full-stack React framework like Next.js or Remix.</p>
+                    </div>
+                </div>
+                <button onclick="window.location.href = './learning1.html'" class="Start absolute bottom-[70px] bg-[#087ea4] hover:bg-blue-800 duration-300 active:scale-[0.95] text-2xl py-[15px] px-[15px] w-[350px] rounded-xl ">Let start with React here!</button>
+            </div>
+        </div>
+        
+    </div>
+    <script src="app.js"></script>
+    <script src="./gsap.js"></script>
+</body>
+</html>

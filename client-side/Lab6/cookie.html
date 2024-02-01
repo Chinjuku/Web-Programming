@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="margin: 0;">
+        <div style="width: 60%; height: 100px;  background: #000;">
+            1
+        </div>
+        <div style="width: 10%; height: 100px; background: blueviolet;">2</div>
+    <!-- <p id="p"></p>
+    <button onclick="Clicksi()">Click chaaim</button> -->
+    <script>
+        const thisisarray = ["Chutikarn", "jaikong", "Chaaim", 1, 2, true, false];
+        localStorage.setItem("obj1", thisisarray)
+        localStorage.setItem("obg2", "Chimahua")
+        
+        sessionStorage.setItem("item", thisisarray)
+
+        console.log(localStorage.length)
+        // let cj = localStorage.getItem("obj1")
+        // console.log(cj)
+
+        window.onstorage = (event) => {
+            if(event.key === "obj1"){
+                alert(event.oldValue + event.newValue)
+            }
+            console.log("SSS")
+        }
+        localStorage.setItem("obj1", "chinjuku")
+        const setCookie = (cname, cvalue, exdays) => {
+            const d = new Date();
+            d.setTime(d.getTime() + (exdays*24*60*60*1000));
+            let expires = "expires="+ d.toUTCString();
+            document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/name";
+        }
+        setCookie("Chinjung", 2000, "10/10/2024")
+
+        // localStorage.clear()
+        const thisisobject = [
+        {
+            nickname: "chaaim",
+            firstname: "Chutikarn",
+            lastname: function() {
+                return "Jaikong"
+            }
+        },
+        {
+            nickname: "Chinjung",
+            firstname: "Chinatip",
+            lastname: "Wu"
+        }
+        ];
+        // console.log(thisisarray[6])
+        // console.log(thisisobject[0].lastname)
+        let name = "cha"
+        const result = "";
+        const Clicksi = () => {
+            let ptag = document.getElementById("p")
+            ptag.innerHTML = thisisarray[1]
+        };
+        
+        // Clicksi(name);
+        // thisisarray.filter((item) => {
+        //         console.log(item > 1)
+        // })
+        // for (i in thisisarray) {
+        //     console.log(thisisarray[i])
+        // }
+    </script>
+</body>
+</html>
+

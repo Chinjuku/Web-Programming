@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body class="w-full h-screen bg-gray-700 text-white">
+    <div class="flex">
+        <nav class="nav open fixed flex flex-col justify-between h-screen w-[90px] bg-[#191b21] duration-500 text-white">
+            <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+                <!-- open toggle -->
+                <div class="absolute right-[-25px] top-[20px]">
+                    <button class="toggle bg-white rounded-[50%] p-[10px]">
+                        <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                    </button>
+                </div>
+                <div class="h-[20%] w-full bg-[#191b21]">
+                    <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                    <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+                </div>
+                    <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                    </button>
+                    <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                    </button>
+                    <button onclick="window.location.href='./installation2.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                    </button>
+                    <button onclick="window.location.href='./learning1.html'" class="h-[11%] bg-black items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                    </button>
+                    <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                    </button>
+                    <button onclick="window.location.href='./managestate.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                    </button>
+            </div>
+        </nav>
+        <!-- -------------- Show Info ----------------- -->
+        <div class="mx-[230px] bg-gray-900 h-full w-full flex flex-col min-[1660px]:mx-[300px] p-[60px] pt-[150px] gap-[28px]">
+            <div class="fixed h-[90px] left-[230px] min-[1720px]:left-[300px] bg-black w-[68%] p-5 z-index-[10000] bg-gray-900 top-0 gap-[20px] justify-center items-center flex">
+                <button onclick="window.location.href='./learning1.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 1</button>
+                <button onclick="window.location.href='./learning2.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 2</button>
+                <button onclick="window.location.href='./learning3.html'" class="w-1/5 h-[60%] rounded-xl bg-yellow-500 hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 3</button>
+                <button onclick="window.location.href='./learning4.html'" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">Part 4 </button>
+                <button onclick="navOpen()" class="w-1/5 h-[60%] rounded-xl bg-[#087ea4] hover:bg-[#04aa6d] gap-2 text-white hover:scale-[0.9] text-center flex items-center justify-center text-2xl duration-200 p-[20px] border border-black bg-gray-800">
+                    Part 5 <img src="./svg/down.svg" width="20" alt="">
+                </button>
+            </div>
+            <div id="itemees" style="opacity: 0; height: 0;" class="fixed right-[275px] top-[66px] rounded-xl grid grid-cols-1  duration-500 w-[180px] bg-[#202127]">
+                <button onclick="window.location.href='./managestate.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 1</button>
+                <button onclick="window.location.href='./managestate2.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Managing state 2</button>
+                <button onclick="window.location.href='./yescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 1</button>
+                <button onclick="window.location.href='./zescapehatch.html'" class="flex justify-center items-center w-full h-full hover:bg-gray-400 hover:rounded-xl hover:text-black">Escape Hatch 2</button>
+            </div>
+            <h1 class="Create1 text-3xl">Defining a component</h1>
+            <p>Traditionally when creating web pages, web developers marked up their content and then added interaction by sprinkling on some JavaScript. This worked great when interaction was a nice-to-have on the web. Now it is expected for many sites and all apps. React puts interactivity first while still using the same technology: a React component is a JavaScript function that you can sprinkle with markup. Here’s what that looks like (you can edit the example below):</p>
+            <div class="flex gap-4">
+            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
+    Profile.jsx
+    
+    export default function Profile() {
+        return (
+            <img
+            src="https://i.imgur.com/MK3eW3Am.jpg"
+            alt="Katherine Johnson"
+            />
+        )
+        }                  
+            </xmp>
+            <div class="w-1/2 flex items-center p-6">
+                <img src="./pic/prof.png" alt="">
+            </div>
+            </div>
+
+            <h1 class="Create2 text-3xl">And here’s how to build a component:</h1>
+            <h2 class="text-2xl">Step 1: Export the component </h2>
+            <p>The export default prefix is a standard JavaScript syntax (not specific to React). It lets you mark the main function in a file so that you can later import it from other files. (More on importing in Importing and Exporting Components!)</p>
+            <h2 class="text-2xl">Step 2: Define the function </h2>
+            <p>With function Profile() { } you define a JavaScript function with the name Profile.</p>
+            <h2 class="text-2xl">Step 3: Add markup </h2>
+            <p>The component returns an < img /> tag with src and alt attributes. < img /> is written like HTML, but it is actually JavaScript under the hood! This syntax is called JSX, and it lets you embed markup inside JavaScript.
+                Return statements can be written all on one line, as in this component:</p>
+            <xmp class="p-2 w-full bg-[#202127] rounded-xl">
+    return <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />;        
+            </xmp>
+            <p>But if your markup isn’t all on the same line as the return keyword, you must wrap it in a pair of parentheses:</p>
+            <xmp class="p-2 w-full bg-[#202127] rounded-xl">
+    return (
+        <div>
+            <img src="https://i.imgur.com/MK3eW3As.jpg" alt="Katherine Johnson" />
+        </div>
+        );        
+            </xmp>
+            <h1 class="Create3 text-3xl">Understanding Your UI as a Tree </h1>
+            <p>Your React app is taking shape with many components being nested within each other. How does React keep track of your app’s component structure?</p>
+            <p>React, and many other UI libraries, model UI as a tree. Thinking of your app as a tree is useful for understanding the relationship between components. This understanding will help you debug future concepts like performance and state management.</p>
+            <h2 class="text-2xl">Your UI as a tree</h2>
+            <p>Trees are a relationship model between items and UI is often represented using tree structures. For example, browsers use tree structures to model HTML (DOM) and CSS (CSSOM). Mobile platforms also use trees to represent their view hierarchy.            </p>
+            <img src="./pic/reactdomtree.png" alt="">
+            <p>Like browsers and mobile platforms, React also uses tree structures to manage and model the relationship between components in a React app. These trees are useful tools to understand how data flows through a React app and how to optimize rendering and app size.</p>
+            
+            <h1 class="Create4 text-3xl">The Render Tree</h1>
+            <p>A major feature of components is the ability to compose components of other components. As we nest components, we have the concept of parent and child components, where each parent component may itself be a child of another component.
+
+                When we render a React app, we can model this relationship in a tree, known as the render tree.
+                
+                Here is a React app that renders inspirational quotes.</p>
+            <xmp class="p-2 w-2/3 overflow-scroll h-[200px] bg-[#202127] rounded-xl">
+    import FancyText from './FancyText';
+    import InspirationGenerator from './InspirationGenerator';
+    import Copyright from './Copyright';
+    
+    export default function App() {
+        return (
+        <>
+            <FancyText title text="Get Inspired App" />
+            <InspirationGenerator>
+            <Copyright year={2004} />
+            </InspirationGenerator>
+        </>
+        );
+    }
+            </xmp>
+            <img src="./pic/rendertree.png" alt="">
+            <p>From the example app, we can construct the above render tree.    
+                The tree is composed of nodes, each of which represents a component. App, FancyText, Copyright, to name a few, are all nodes in our tree.
+                The root node in a React render tree is the root component of the app. In this case, the root component is App and it is the first component React renders. Each arrow in the tree points from a parent component to a child component.</p>
+            <h1 class="Create5 text-3xl">The Module Dependency Tree </h1>
+            <p>Another relationship in a React app that can be modeled with a tree are an app’s module dependencies. As we break up our components and logic into separate files, we create JS modules where we may export components, functions, or constants.
+                Each node in a module dependency tree is a module and each branch represents an import statement in that module.</p>
+            <p>If we take the previous Inspirations app, we can build a module dependency tree, or dependency tree for short.</p>
+            <img src="./pic/dependencytree.png" alt="">
+            <p>The root node of the tree is the root module, also known as the entrypoint file. It often is the module that contains the root component.</p>
+            <p>Dependency trees are useful to determine what modules are necessary to run your React app. When building a React app for production, there is typically a build step that will bundle all the necessary JavaScript to ship to the client. The tool responsible for this is called a bundler, and bundlers will use the dependency tree to determine what modules should be included.</p>
+            <div class="w-full justify-between flex">
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./learning2.html'">PREV</button>
+                <button class="learn bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./learning4.html'">NEXT</button>
+            </div>
+        </div>
+        <div class="fixed w-[140px] bg-[#191b21] right-0 h-screen">
+            <div class="opacity-100 text-xl h-[15%] flex flex-col items-center p-[20px] bg-gray-800">Click to show Topics
+                <div class="flex justify-center w-full">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                    <img src="./svg/down.svg" width="20" alt="">
+                </div>
+            </div>
+            <button onclick="scrollingTo('Create1')" class="Content1 text-start opacity-100 text-xl h-[15%] flex items-center p-[20px] bg-violet-600">Defining a component</button>
+            <button onclick="scrollingTo('Create2')" class="Content2 text-start opacity-[0.25] text-xl h-[15%] bg-blue-600 flex items-center p-[20px]">How to build Component</button>
+            <button onclick="scrollingTo('Create3')" class="Content3 text-start opacity-[0.25] text-xl h-[15%] bg-green-900 flex items-center p-[20px]">Understand UI as a Tree</button>
+            <button onclick="scrollingTo('Create4')" class="Content4 text-start opacity-[0.25] text-xl h-[15%] bg-yellow-400 flex items-center p-[20px]">The Render Tree</button>
+            <button onclick="scrollingTo('Create5')" class="Content5 text-start opacity-[0.25] text-xl h-[15%] bg-yellow-600 flex items-center p-[20px]">The Module Dependency Tree</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="gsap.js"></script>
+</body>
+</html>

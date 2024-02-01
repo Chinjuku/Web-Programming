@@ -1,0 +1,32 @@
+span {
+    /* opacity: 0 */
+    color: red;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+.form-control {
+    background: rgb(196, 240, 255);
+}
+label {
+    font-size: large;
+    font-weight: 700;
+}
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container {
+    padding: 40px;
+    border-radius: 20px;
+    border: black 1px solid;
+    background: lightpink;
+}
+#success {
+    opacity: 0;
+}

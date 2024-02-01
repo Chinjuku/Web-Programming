@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        body{
+            font-size: 20px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            display: flex;
+            
+            padding: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+        }
+        th{
+            font-weight: 400;
+            text-align: start;
+            padding: 10px;
+        }
+        .bigbox {
+            padding-top: 10px;
+            margin: 0 40px;
+            width: 500px;
+            height: 310px;
+            display: grid;
+            columns: 5;
+            /* background-color: beige; */
+            /* column-gap: 10px; */
+        }
+        .box1 {
+            height: 80%;
+            width: 45%;
+            background-color: rgb(55, 241, 241);
+            display: flex;
+            align-items: center;
+        }
+        .box2 {
+            height: 80%;
+            width: 68%;
+            background-color: rgb(98, 91, 233);
+            display: flex;
+            align-items: center;
+        }
+        .box3 {
+            height: 80%;
+            width: 13%;
+            background-color: rgb(226, 105, 245);
+            display: flex;
+            align-items: center;
+        }
+        .box4 {
+            height: 80%;
+            width: 96%;
+            background-color: rgb(255, 116, 202);
+            display: flex;
+            align-items: center;
+        }
+        .box5 {
+            height: 80%;
+            width: 33%;
+            background-color: rgb(255, 124, 124);
+            display: flex;
+            align-items: center;
+        }
+    </style>
+<body>
+    <table>
+        <tr>
+            <th>ลำดับ</th>
+            <th>ชื่อ</th>
+            <th>คะแนน</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>J. Depp</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>D. Washington</td>
+            <td>68</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>B. Pitt</td>
+            <td>13</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>R. Crowe</td>
+            <td>96</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>T. Cruise</td>
+            <td>33</td>
+        </tr>
+    </table>
+    <div class="bigbox">
+        <div class="box1">J. Depp</div>
+        <div class="box2">D. Washington</div>
+        <div class="box3">B. Pitt</div>
+        <div class="box4">R. Crowe</div>
+        <div class="box5">T. Cruise</div>
+    </div>
+</body>
+</html>

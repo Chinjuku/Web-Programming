@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body class="w-full h-screen bg-[#374151] text-white">
+    <div class="flex">
+        <nav class="nav open fixed flex flex-col justify-between h-screen w-[90px] bg-[#191b21] duration-500 text-white">
+            <div class="flex h-[75%] flex-col relative bg-[#191b21]">
+                <!-- open toggle -->
+                <div class="absolute right-[-25px] top-[20px]">
+                    <button class="toggle bg-white rounded-[50%] p-[10px]">
+                        <div class="toggles w-[25px] h-[25px]" alt=""></div>
+                    </button>
+                </div>
+                <div class="h-[20%] w-full bg-[#191b21]">
+                    <img class="absolute left-[15px] top-[35px] w-[55px]" src="./svg/react.svg" alt="">
+                    <p class="texthere absolute top-[40px] opacity-0 duration-300 left-[82px] text-4xl font-bold">React</p>
+                </div>
+                    <button onclick="window.location.href='./'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img src="./svg/home.svg" class="w-[25px]" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Home</p>
+                    </button>
+                    <button onclick="window.location.href='./installation1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <p class="absolute left-[30px]"><img class="w-[25px]" src="./svg/getstart.svg" alt=""></p>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-xl font-bold">Installing</p>
+                    </button>
+                    <button onclick="window.location.href='./installation2.html'" class="h-[11%] bg-black items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/rocket-solid.svg" class="w-[25px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-lg font-bold">React Framework</p>
+                    </button>
+                    <button onclick="window.location.href='./learning1.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-lg font-bold">Learn React</p>
+                    </button>
+                    <button onclick="window.location.href='./learning4.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Adding Interactivity</p>
+                    </button>
+                    <button onclick="window.location.href='./managestate.html'" class="h-[11%] items-center flex px-[38px] w-full hover:bg-[#23272f] active:bg-[#23272f]">
+                        <div class="absolute left-[30px]"><img src="./svg/book.svg" class="w-[30px]" alt=""></div>
+                        <p class="texthere absolute opacity-0 duration-300 left-[75px] text-start text-md font-bold">Managing State</p>
+                    </button>
+            </div>
+        </nav>
+        <!-- -------------- Show Info ----------------- -->
+        <div class="mx-[230px] bg-gray-900 h-full w-full flex flex-col min-[1520px]:mx-[300px] p-[60px] gap-[30px]">
+            <h1 class="text-3xl text-bold">Production-grade React frameworks</h1>
+            <h1 class="text-2xl">Next.js</h1>
+            <p><a href="./" class="text-[#149eca]">Next.js</a> is a full-stack React framework. It’s versatile and lets you create React 
+               apps of any size—from a mostly static blog to a complex dynamic application. To 
+               create a new Next.js project, run in your terminal:</p>
+            <div class="p-3 w-full bg-[#202127] rounded-xl">npx create-next-app@latest</div>
+            <p>Next.js is maintained by Vercel. You can deploy a Next.js app to any Node.js or serverless hosting, or to your own server. Next.js also supports a static export which doesn’t require a server.</p>
+            <h1 class="text-2xl">Remix</h1>
+            <p><a href="./" class="text-[#149eca]">Remix</a> is a full-stack React framework with nested routing. It lets you
+                 break your app into nested parts that can load data in parallel and refresh in response to the user actions. To create
+                  a new Remix project, run:</p>
+            <div class="p-3 w-full bg-[#202127] rounded-xl">npx create-remix</div>
+            <p>Remix is maintained by Shopify. When you create a Remix project, you need to pick your deployment target. You can deploy a Remix app to any Node.js or serverless hosting by using or writing an adapter.</p>
+            <h1 class="text-2xl">Gatsby</h1>
+            <p><a href="./" class="text-[#149eca]">Gatsby</a> is a React framework for fast CMS-backed websites. Its rich plugin 
+                ecosystem and its GraphQL data layer simplify integrating content, APIs, and services into one website. To create 
+                a new Gatsby project, run:</p>
+            <div class="p-3 w-full bg-[#202127] rounded-xl">npx create-gatsby</div>
+            <p>Gatsby is maintained by Netlify. You can deploy a fully static Gatsby site to any static hosting. If you opt into using server-only features, make sure your hosting provider supports them for Gatsby.</p>
+            <h1 class="text-2xl">Expo (for native apps) </h1>
+            <p><a href="./" class="text-[#149eca]">Expo</a> is a React framework that lets you create universal Android, iOS, and web apps
+                 with truly native UIs. It provides an SDK for React Native that makes the native parts easier to use. To create a new Expo 
+                 project, run:</p>
+            <div class="p-3 w-full bg-[#202127] rounded-xl">npx create-expo-app</div>
+            <p>Expo is maintained by Expo (the company). Building apps with Expo is free, and you can submit them to the Google and Apple app stores without restrictions. Expo additionally provides opt-in paid cloud services.</p>
+            
+            <div class="askbox duration-500 h-[100px] flex flex-col gap-4">
+                <h1 class="text-3xl">Can I use React without a framework?</h1>
+                <button class="clicktoshow bg-green-800 p-3 px-6 rounded-md w-[25%] justify-center flex gap-6"><p class="text-lg">Show Detail</p><img src="./svg/down.svg" /></button>
+                <div class="showbox opacity-0 overflow-scroll duration-500 p-[20px] rounded-md bg-[#202127]">
+                    <span class="span">
+                        You can definitely use React without a framework—that’s how you’d use React for a part of your page. However, if you’re building a new app or a site fully with React, we recommend using a framework. Here’s why.
+                        Even if you don’t need routing or data fetching at first, you’ll likely want to add some libraries for them. As your JavaScript bundle grows with every new feature, you might have to figure out how to split code for every route individually. As your data fetching needs get more complex, you are likely to encounter server-client network waterfalls that make your app feel very slow. As your audience includes more users with poor network conditions and low-end devices, you might need to generate HTML from your components to display content early—either on the server, or during the build time. Changing your setup to run some of your code on the server or during the build can be very tricky.
+                        These problems are not React-specific. This is why Svelte has SvelteKit, Vue has Nuxt, and so on. To solve these problems on your own, you’ll need to integrate your bundler with your router and with your data fetching library. It’s not hard to get an initial setup working, but there are a lot of subtleties involved in making an app that loads quickly even as it grows over time. You’ll want to send down the minimal amount of app code but do so in a single client–server roundtrip, in parallel with any data required for the page. You’ll likely want the page to be interactive before your JavaScript code even runs, to support progressive enhancement. You may want to generate a folder of fully static HTML files for your marketing pages that can be hosted anywhere and still work with JavaScript disabled. Building these capabilities yourself takes real work.
+                        React frameworks on this page solve problems like these by default, with no extra work from your side. They let you start very lean and then scale your app with your needs. Each React framework has a community, so finding answers to questions and upgrading tooling is easier. Frameworks also give structure to your code, helping you and others retain context and skills between different projects. Conversely, with a custom setup it’s easier to get stuck on unsupported dependency versions, and you’ll essentially end up creating your own framework—albeit one with no community or upgrade path (and if it’s anything like the ones we’ve made in the past, more haphazardly designed).
+                        If you’re still not convinced, or your app has unusual constraints not served well by these frameworks and you’d like to roll your own custom setup, we can’t stop you—go for it! Grab react and react-dom from npm, set up your custom build process with a bundler like Vite or Parcel, and add other tools as you need them for routing, static generation or server-side rendering, and more.
+                    </span>
+                </div>
+            </div>
+            <h1 class="text-3xl">Installation With Using TypeScript</h1>
+            <p>Installation 
+                All production-grade React frameworks offer support for using TypeScript. Follow the framework specific guide for installation:</p>
+            <div>
+                <li>Next.js</li>
+                <li>Remix</li>    
+                <li>Gatsby</li>
+                <li>Expo</li>
+            </div>
+            <h2 class="text-2xl">Adding TypeScript to an existing React project</h2>
+            <div class="w-full bg-[#202127] p-[20px] rounded-xl">
+                <p>npm install @types/react @types/react-dom</p>
+            </div>
+            
+            <div class="w-full justify-between flex">
+                <button class="bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./installation1.html'">PREV</button>
+                <button class="bg-white px-3 py-2 mt-[20px] border rounded-xl text-[#191b21] hover:bg-[#8391a6]" onclick="window.location.href='./learning1.html'">NEXT</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

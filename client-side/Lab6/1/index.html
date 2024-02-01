@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Responsive</title>
+    <style>
+        h1 {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 24px;
+        }
+        @media only screen and (min-width:250px) and (max-width: 400px) {
+            .smallbox2 {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body class="p-8">
+    <div class="flex flex-col flex-1 h-screen gap-4 box">
+        <div>
+            <h1>Programming langanguage</h1>
+            <p>A programming language is a formal language which comprises a set of Instructions
+                used to produce various kinds of output. Programming languages are used to create
+                programs that implement specific algorithms.
+            </p>
+        </div>
+        <div class="flex gap-4 smallbox2">
+            <div>
+                <h1>C</h1>
+                <p>C is a general-purpose imperative computer programming, lexical
+                    variable scope and recursion, while a static type system prevents
+                    many unintended operations.
+                </p>
+            </div>
+            <div>
+                <h1>Python</h1>
+                <p>Python is an Interpreted high-level programming language for general-purpose 
+                    programming. Python has a design philosophy that emphasizes code readability, notably 
+                    using significant whitespace.
+                </p>
+            </div>
+            <div>
+                <h1>Java</h1>
+                <p>Java is a general-purpose computer-programming language that is concurrent, class-based,
+                    object-oriented, and specifically designed to have as few implementation 
+                    dependencies as possible.
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    
+</body>
+</html>

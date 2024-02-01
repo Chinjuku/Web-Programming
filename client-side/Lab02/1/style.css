@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: candy;
+}
+.pic {
+    width: 90%;
+    padding: 2px 40px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.box {
+    padding: 50px 0;
+    width: 1100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:antiquewhite
+}
+.box2{
+    padding: 30px 50px;
+    font-size: 18px;
+}
+.pic p {
+    margin-top: 20px;
+    text-align: center;
+}
+@font-face {
+    font-family: candy;
+    src: url(EmilysCandy-Regular.ttf);
+}

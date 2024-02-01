@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <title>Document</title>
+</head>
+<body style="padding: 50px;">
+    <form action="" id="myForm">
+        <h1>Add Form Data</h1>
+        <br>
+        <div class="row g-2">
+            <div class="form-group col-md-6">
+                <label for="">Firstname</label>
+                <input class="form-control" type="text" id="firstName" placeholder="firstname">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="">Lastname</label>
+                <input class="form-control" type="text" id="lastName" placeholder="lastname">
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <label for="">Address</label>
+            <textarea style="height: 100px;" type="text" class="form-control" id="address" placeholder="address"></textarea>
+        </div>
+        <div class="row g-3">
+            <div class="form-group col-md-4">
+                <label for="">Distinct</label>
+                <input class="form-control" type="text" id="distinct" placeholder="distinct">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Sub-Distinct</label>
+                <input class="form-control" type="text" id="subdistinct" placeholder="sub-distinct">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="">Postal-Code</label>
+                <input class="form-control" type="text" id="postalCode" placeholder="postalCode">
+            </div>
+        </div>
+        <br>
+        <button class="btn btn-primary" onclick="handleSubmit()">Submit</button>
+    </form>
+    <br>
+    <button class="btn btn-secondary" onclick="loadData()">Load data</button>
+    <div id="divdiv" style="display: flex; justify-content: center; margin-top: 30px;">
+        <table class="table table-dark" style="width: 90%; text-align: center;">
+            <tr>
+                <th scope="col">First name</th>
+                <th scope="col">Last name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Distinct</th>
+                <th scope="col">Sub Distinct</th>
+                <th scope="col">Postal Code</th>
+            </tr>
+        </table>
+    </div>
+    <script>
+        const fname = document.getElementById("firstName")
+        const lname = document.getElementById("lastName") 
+        const addresss = document.getElementById("address")
+        const distincts = document.getElementById("distinct")
+        const subdistincts = document.getElementById("subdistinct")
+        const postalcode = document.getElementById("postalCode") 
+        
+        // const arraySaveKey = ["fname", "lname", "addresss", "distincts", "subdistincts", "postalcode"]
+        
+        const handleSubmit = () => {
+            // if(fname.value.length === 0 || lname.value.length === 0 /* ___.length === 0 */){
+            //     alert("your data not complete")
+            // }
+            // else {
+                let data = {
+                    "fname": fname.value,
+                    "lname": lname.value,
+                    "addresss": addresss.value,
+                    "distincts": distincts.value,
+                    "subdistincts": subdistincts.value,
+                    "postalcode": postalcode.value
+                }   
+            // }
+            localStorage.setItem("jsonn", JSON.stringify(data))
+        };
+        // window.onload = () => {
+        //     loadData()
+        // }
+        const loadData = () => {
+            let table = document.querySelector(".table")
+            let tablerow = document.createElement("tr")
+            let data = JSON.parse(localStorage.getItem("jsonn"))
+            let arrayLoadKey = [data.fname, data.lname, data.addresss, data.distincts, data.subdistincts, data.postalcode]
+            arrayLoadKey.map((item) => {
+                if(item.length === 0) {
+                    alert("You old data has some empty.")
+                }
+                let tabledata = document.createElement("td")
+                let tnode = document.createTextNode(item)
+                tabledata.appendChild(tnode)
+                tablerow.appendChild(tabledata)
+                table.appendChild(tablerow)
+                count = 1;
+            })
+        };
+    </script>
+</body>
+</html>
