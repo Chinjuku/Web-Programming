@@ -7,18 +7,21 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/tomorrow-night-bright.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <!-- and it's easy to individually load additional languages -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script> -->
     <title>Document</title>
 </head>
 <body>
-    <div class="flex flex-col rounded-b-xl text-white justify-center items-center h-screen bg-green-600  overflow-hidden"
-        id="hero">
-        <!-- <img src="./images/vue"> -->
-        <div>
-            <p class="text-8xl font-bold text-center mb-4" id="title">React.js</p>
-            <p class="text-3xl text-center" id="subtitle">Good Framework</p>
+    <div id="hero" class="hihi flex flex-col rounded-b-xl text-white justify-center items-center h-screen bg-green-600  overflow-hidden">
+        <div class="text-6xl">
+            <h1 id="title">Hello</h1>
+            <h1 id="subtitle">World</h1>
         </div>
+        <h2 class="subtitle text-3xl">Yooo, My name is Chinjuku</h2>
+        <div class="yoo w-[500px] h-[500px] bg-red-500">Box</div>
     </div>
-
     <div
         class="flex flex-col justify-center items-center gap-y-16 py-8 px-6 2xl:px-0 w-full drop-shadow-lg text-white panel overflow-hidden">
         <div class="flex flex-col  w-full 2xl:max-w-screen-2xl">
@@ -44,21 +47,13 @@
                 </div>
                 h1 class="Createee text-3xl">Conditional rendering </h1>
             <p>In React, there is no special syntax for writing conditions. Instead, you’ll use the same techniques as you use when writing regular JavaScript code. For example, you can use an if statement to conditionally include JSX:</p>
-            <xmp class="p-2 h-[300px] w-1/2 bg-[#202127] rounded-xl">
-    Home.jsx
-
-    let content;
-    if (isLoggedIn) {
-        content = <AdminPanel />;
-    } else {
-        content = <LoginForm />;
-    }
-    return (
-        <div>
-        {content}
-        </div>
-    );
-            </xmp>
+            <pre class="css">
+            <code>
+                body {
+                    width: 100px;
+                }
+            </code>
+            </pre>
             <p>
                 If you prefer more compact code, you can use the conditional ? operator. Unlike if, it works inside JSX:
             </p>
@@ -117,34 +112,8 @@
         </div>
         </div>
         </div>
-        <script>    
-        const timeline = gsap.timeline();
-timeline
-    .to("#title", {
-    scrollTrigger: {
-        trigger: "#hero",
-        pin: true,
-        start: "top top",
-        end: "+=1900",
-        scrub: 0.2,
-        pin: true
-    },
-    scale: 10,
-    y: -100,
-    opacity: 0,
-    }).to("#subtitle", {
-    scrollTrigger: {
-        trigger: "#hero",
-        start: "top top",
-        end: "+=1900",
-        scrub: 1,
-    },
-    scale: 10,
-    y: 100,
-    opacity: 0,
-    });
-            
-            
-        </script>
+        <script src="gsap.js"></script>
+        <script>hljs.highlightAll();</script>
+
 </body>
 </html>
