@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh;">
+    <form action="./show.php" method="post" style="
+        display: flex; 
+        flex-direction: column;
+        width: 400px;  
+        font-size: 28px;
+        gap: 10px;
+        align-items: center;
+        ">
+        <label for="">Choose your month in 2024</label>
+        <select name="month" id="" style="
+        width: 40%;
+        font-size: large;
+        padding: 5px 10px;
+        ">
+            <option value="1">January</option>
+            <option value="2">Febuary</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select>
+        <button type="submit" style="width: 40%; 
+        background-color: chocolate;
+        cursor: pointer;">Submit</button>
+    </form>
+</body>
+</html>

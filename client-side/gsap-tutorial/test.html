@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="w-[600px] relative h-[70px] flex">
+        <a href="#" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">HOME</a>
+        <a href="#" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE1</a>
+        <a href="#" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE2</a>
+        <a href="#" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE3</a>
+        <a href="#" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE4</a>
+        <div id="marker" class="bottom-0 border-b absolute border-[10px] border-red-700 w-1/5 duration-500 transition-all"></div>
+    </nav>
+    
+    <script>
+        const marker = document.querySelector('#marker');
+        const items = document.querySelectorAll('nav a');
+    
+        const indicator = (element) => {
+            marker.style.left = element.offsetLeft + 'px';
+            marker.style.width = element.offsetWidth + 'px';
+        };
+    
+        // Initial indicator position (start with the first link)
+        indicator(items[0]);
+    
+        items.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                indicator(link);
+            });
+        });
+    </script>
+    
+</body>
+</html>

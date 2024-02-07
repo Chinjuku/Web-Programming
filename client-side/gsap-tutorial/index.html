@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth scroll-pt-[-100px]">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,107 +13,85 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/go.min.js"></script> -->
     <title>Document</title>
 </head>
-<body>
-    <div id="hero" class="hihi flex flex-col rounded-b-xl text-white justify-center items-center h-screen bg-green-600  overflow-hidden">
-        <div class="text-6xl">
-            <h1 id="title">Hello</h1>
-            <h1 id="subtitle">World</h1>
-        </div>
-        <h2 class="subtitle text-3xl">Yooo, My name is Chinjuku</h2>
-        <div class="yoo w-[500px] h-[500px] bg-red-500">Box</div>
+<body class=" ">
+    <div class="fixed bg-white w-full z-[20] justify-center flex">
+        <nav class="w-[900px] relative h-[70px] flex">
+            <a href="#home" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">HOME</a>
+            <a href="#page1" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE1</a>
+            <a href="#page2" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE2</a>
+            <a href="#page3" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE3</a>
+            <a href="#page4" class="w-1/5 flex items-center justify-center h-full text-3xl font-bold">PAGE4</a>
+            <div id="marker" class="bottom-0 border-b absolute border-[10px] border-red-700 w-1/5 duration-300 transition-all"></div>
+        </nav>
     </div>
-    <div
-        class="flex flex-col justify-center items-center gap-y-16 py-8 px-6 2xl:px-0 w-full drop-shadow-lg text-white panel overflow-hidden">
-        <div class="flex flex-col  w-full 2xl:max-w-screen-2xl">
-            <div>
-                <div
-                    class="flex flex-col justify-center items-center flex-shrink-0 md:flex-row md:gap-16 gap-4 pb-8 content-block">
-                    <div>
-                        <img src="./images/vue3d.webp" id="vue-3d" class="w-64 pointer-events-none select-none" />
-                    </div>
-                    <div>
-                        <h1 class="heading">What is Vue?</h1>
-                        <p class="text-left">Vue (pronounced /vjuː/, like view) is a JavaScript framework for building
-                            user
-                            interfaces. It builds
-                            on top of standard HTML, CSS, and JavaScript and provides a declarative and component-based
-                            programming model that helps you efficiently develop user interfaces, be they simple or
-                            complex.</p>
-                        <br />
-                    </div>
-                </div>
-                <div class="content-block">
-                    <p class="mb-2">Here is a minimal example:</p>
-                </div>
-                h1 class="Createee text-3xl">Conditional rendering </h1>
-            <p>In React, there is no special syntax for writing conditions. Instead, you’ll use the same techniques as you use when writing regular JavaScript code. For example, you can use an if statement to conditionally include JSX:</p>
+
+    <section id="home">
+        <div id="hero" class="hihi flex flex-col rounded-b-xl text-white justify-center items-center h-screen bg-red-100  overflow-hidden">
+            <div class="text-6xl">
+                <h1 id="title">Hello</h1>
+                <h1 id="subtitle">World</h1>
+            </div>
+            <h2 class="subtitle text-3xl">Yooo, My name is Chinjuku</h2>
+            <div class="yoo w-[500px] h-[500px] bg-red-500">Box</div>
+        </div>
+    </section>
+    <section id="page1">
+        <div class="h-screen bg-red-200">
+
+        </div>
+    </section>
+    <section id="page2">
+        <div class="h-screen bg-red-400">
+
+        </div>
+    </section>
+    <section id="page3">
+        <div class="h-screen bg-red-600">
+
+        </div>
+    </section>   
+    <section id="page4">
+        <div class="h-screen bg-red-800">
             <pre class="css">
-            <code>
-                body {
-                    width: 100px;
-                }
-            </code>
-            </pre>
-            <p>
-                If you prefer more compact code, you can use the conditional ? operator. Unlike if, it works inside JSX:
-            </p>
-            <xmp class="Create1 p-2 w-1/2 bg-[#202127] rounded-xl">
-    Home.jsx
-            
-    <div>
-        {isLoggedIn ? (
-            <AdminPanel />
-        ) : (
-            <LoginForm />
-        )}
-    </div>
-            </xmp>
-            <p>When you don’t need the else branch, you can also use a shorter logical && syntax:</p>
-            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
-    <div>
-        {isLoggedIn && <AdminPanel />}
-    </div>
-            </xmp>
-            <p>All of these approaches also work for conditionally specifying attributes. If you’re unfamiliar with some of this JavaScript syntax, you can start by always using if...else.</p>
-            <h1 class="Create2 text-3xl">Rendering lists</h1>
-            <p>You will rely on JavaScript features like for loop and the array map() function to render lists of components.
-                For example, let’s say you have an array of products:</p>
-            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
-    const products = [
-        { title: 'Cabbage', id: 1 },
-        { title: 'Garlic', id: 2 },
-        { title: 'Apple', id: 3 },
-    ];
-            </xmp>
-            <p>Inside your component, use the map() function to transform an array of products into an array of < li> items:</p>
-                <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
-    const listItems = products.map(product =>
-    <li key={product.id}>
-        {product.title}
-    </li>
-    );
-
-    return (
-    <ul>{listItems}</ul>
-    );
-                </xmp>
-            <p>Notice how < li> has a key attribute. For each item in a list, you should pass a string or a number that uniquely identifies that item among its siblings. Usually, a key should be coming from your data, such as a database ID. React uses your keys to know what happened if you later insert, delete, or reorder the items.</p>
-            <h1 class="Create3 text-3xl">
-                Updating the screen
-            </h1>
-            <p>Often, you’ll want your component to “remember” some information and display it. For example, maybe you want to count the number of times a button is clicked. To do this, add state to your component.
-
-                First, import useState from React:</p>
-            <p>First, import useState from React:</p>
-            <xmp class="p-2 w-1/2 bg-[#202127] rounded-xl">
-    import { useState } from 'react';
-            </xmp>
-
+                <code>
+                    body {
+                        width: 100px;
+                    }
+                </code>
+                </pre>
         </div>
-        </div>
-        </div>
+    </section>    
         <script src="gsap.js"></script>
         <script>hljs.highlightAll();</script>
+        <script>
+            const marker = document.querySelector('#marker');
+            const items = document.querySelectorAll('nav a');
+        
+            const indicator = (element) => {
+                marker.style.left = element.offsetLeft + 'px';
+                marker.style.width = element.offsetWidth + 'px';
+            };
+            const scrollingTo = (element) => {
+                const section = document.getElementById(`${element}`)
+                if(section) {
+                    window.scrollTo({
+                        top : section.offsetTop,
+                        behavior : "smooth",
+                        transition : '1s'
+                    })
+                }
+            }
 
+            indicator(items[0]);
+        
+            items.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    indicator(link);
+                    const targetSectionId = link.getAttribute('href').substring(1);
+                    scrollingTo(targetSectionId)
+                });
+            });
+        </script>
 </body>
 </html>
