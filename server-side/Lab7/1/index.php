@@ -30,9 +30,10 @@
         <button name="submit" type="submit">Submit</button>
     </form>
     <div>
-        <h1><?php echo 'แสดงตารางสูตรคูณแม่ ' . $_POST["cals"] ?></h1>
+        <h1><?php error_reporting(E_ERROR | E_PARSE); echo 'แสดงตารางสูตรคูณแม่ ' . $_POST["cals"] ?></h1>
         <table style="width: 300px; font-size:18px;">
             <?php
+                error_reporting(E_ERROR | E_PARSE);
                 if($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if(!isset($_POST["cals"])) {
                         echo '<script>alert("Error!")</script>';
