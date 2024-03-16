@@ -12,9 +12,10 @@ class AdminController extends Controller
     // }
     function index() {
         // ดึงข้อมูลจาก table blogs มาใช้งาน
-        $blogs = DB::table('blogs')->paginate(3); // table('blogs')ระบุชื่อตาราง
-        $register = DB::table('register')->get();
-        return view('blog', compact('blogs', 'register'));
+        // $blogs = DB::table('blogs')->paginate(3); // table('blogs')ระบุชื่อตาราง
+        // $register = DB::table('register')->get();
+        // return view('blog', compact('blogs', 'register'));
+        return view('index');
     }
     function createform() {
         return view('form');

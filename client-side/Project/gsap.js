@@ -1,41 +1,62 @@
 gsap.registerPlugin(ScrollTrigger);
 
-const tl = gsap.timeline();
+const tl = gsap.timeline({
+    scrollTrigger : {
+        trigger: '.boxa',
+        start: 'top top',
+        end: '+=2500',
+        scrub : true,
+        // markers: true,
+        pin: true,
+        pinSpacing: false,
+    },
+});
 
-tl.to('.boxa', {opacity: 0, duration: 4})
-  .from('.advantage', {
+tl.to( '.logo' , {
+    scale: 5,
+    opacity: 0,
+    x: 200,
+    duration: 4,
+}).to('.boxa', {
+    opacity: 0,
+    duration: 4
+})
+const tl2 = gsap.timeline({
+    scrollTrigger : {
+        trigger: '.boxb',
+        start: 'top top',
+        end: '+=3000',
+        scrub : true,
+        // markers: true,
+        pin: true,
+        pinSpacing: false,
+    },
+});
+
+tl2.from('.advantage', {
     x: 700,
     opacity: 0,
-    duration: 5 })
+    duration: 1 })
   .from('.Box6', {
     x: -700,
     opacity: 0,
-    duration: 5, })
+    duration: 2, })
   .from('.Start', {
     y: 200,
     duration: 1,
     opacity: 0 })
     
-ScrollTrigger.create( {
-    animation : tl,
-    trigger: '.boxa',
-    start: 'bottom 80%',
-    // markers: true,
-    scrub: 2,
-    pin: true,
-    pinSpacing: false,
-})
+// ScrollTrigger.create( {
+//     animation : tl,
+//     trigger: '.boxa',
+//     start: 'bottom 80%',
+//     // markers: true,
+//     end: "+=800",
+//     scrub: 2,
+//     pin: true,
+//     pinSpacing: false,
+// })
 
-gsap.to( '.logo' ,{
-    scrollTrigger : {
-        trigger: '.logo',
-        start: 'top top',
-        scrub : true,
-    },
-    scale: 5,
-    opacity: 0,
-    x: 200 
-})
 gsap.to( '.comment1' ,{
     scrollTrigger : {
         onEnter: () => {
@@ -43,6 +64,7 @@ gsap.to( '.comment1' ,{
         },
         trigger: '.logo',
         start: 'top top',
+        end: '+=900',
         scrub : true,
     },
     scale: 5,
@@ -55,33 +77,36 @@ gsap.to('.logo' , {
 });
 
 // learning1.html
-gsap.from('.Content1', {
-    scrollTrigger : {
-        trigger: '.Create1',
-        start : 'top center',
-        //start : 'จากboxที่เลือก จากหน้าจอ',
-        //start : '20px 80%' สามารถใช้ pixel ของ box และ % จากหน้าจอได้
-        //end : 'bottom center' จากboxที่เลือก จากหน้าจอ
-        //end '+=500': สามารถใส่ += ต่า 100 px ได้
-        // markers: true,
-        //markers: true แสดงจุดเริ่มต้นและจุดสิ้นสุด
-        // scrub: true, // scrub เพื่อย้อนภาพกลับเมื่อ scroll ถอยกลับ / สามารถใส่เป็นเลขเวลาเเทนได้ ex. scrub : 1
-        // pin: true, // pin ปักหมุดตำแหน่งคาไว้ สามารถใส่ pin ที่ box ได้
-        // pinSpacing: false, // ป้องกัน pin เว้น space ว่าง
-        toggleActions: 'none restart restart none'
-        // toggleActions: 'เลื่อนลงมาเจอ เจอ->เลื่อนลงผ่าน เลื่อนขึ้นกลับมาเจอ เจอ->เลื่อนขึ้นผ่าน'
-    },
-    opacity: 0,
-    duration: -1,
-})
+// gsap.from('.Content1', {
+//     scrollTrigger : {
+//         trigger: '.Create1',
+//         start : 'top center',
+//         //start : 'จากboxที่เลือก จากหน้าจอ',
+//         //start : '20px 80%' สามารถใช้ pixel ของ box และ % จากหน้าจอได้
+//         //end : 'bottom center' จากboxที่เลือก จากหน้าจอ
+//         //end '+=500': สามารถใส่ += ต่า 100 px ได้
+//         // markers: true,
+//         //markers: true แสดงจุดเริ่มต้นและจุดสิ้นสุด
+//         // scrub: true, // scrub เพื่อย้อนภาพกลับเมื่อ scroll ถอยกลับ / สามารถใส่เป็นเลขเวลาเเทนได้ ex. scrub : 1
+//         // pin: true, // pin ปักหมุดตำแหน่งคาไว้ สามารถใส่ pin ที่ box ได้
+//         // pinSpacing: false, // ป้องกัน pin เว้น space ว่าง
+//         toggleActions: 'none restart restart none'
+//         // toggleActions: 'เลื่อนลงมาเจอ เจอ->เลื่อนลงผ่าน เลื่อนขึ้นกลับมาเจอ เจอ->เลื่อนขึ้นผ่าน'
+//     },
+//     opacity: 0,
+//     duration: -1,
+// })
 gsap.to('.Content1', {
     scrollTrigger : {
-        trigger: '.Create1',
-        toggleActions: 'none play reverse play'
+        trigger: '#box',
+        start: '-10px top',
+        end: '500px 20%',
+        markers:true,
+        // toggleActions: 'play none restart play'
         // toggleActions: 'none restart restart restart'
         // toggleActions: 'เลื่อนลงมาเจอ เจอ->เลื่อนลงผ่าน เลื่อนขึ้นกลับมาเจอ เจอ->เลื่อนขึ้นผ่าน'
     },
-    opacity: 0.25,
+    opacity: 1,
     duration: 0.2,
 })
 gsap.to('.Content2', {
