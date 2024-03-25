@@ -13,7 +13,7 @@
 </head>
 <body>
     <div>
-        <a href="./logout.php">Logout</a>
+        <?php include './logout.php'; ?>
         <a href="./manage.php">Manage User</a>
     </div>
     <p>Home</p>

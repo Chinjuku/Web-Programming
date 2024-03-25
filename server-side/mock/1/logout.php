@@ -1,9 +1,4 @@
 <?php
-    // session_start();
-    if(!isset($_SESSION['user_id'])){
-        header('Location:./login.php');
-    }
-
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         session_start();
         session_destroy();

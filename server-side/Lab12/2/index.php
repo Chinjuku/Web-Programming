@@ -2,17 +2,21 @@
     echo '<script src="https://cdn.tailwindcss.com"></script>';
     echo '<div class="m-6">';
     echo '<p class="text-3xl font-bold">Product Details</p><br>';
-    error_reporting(E_ERROR | E_PARSE);
+    // error_reporting(E_ERROR | E_PARSE); //ข้าม error
     $products = json_decode(file_get_contents('http://10.0.15.21/lab/lab12/restapis/products.php'));
     $num = 0;
-    if($_POST['action'] == 'decrement'){
-        $_POST['num'] == 0 ? $num = $_POST['num'] : $num = $_POST['num'] - 1;
-    }
-    elseif ($_POST['action'] == 'increment'){
-        $_POST['num'] == 42 ? $num = $_POST['num'] : $num = $_POST['num'] + 1;
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+        $pages = $_POST['num'];
+        if($_POST['action'] == 'decrement'){
+            $pages == 0 ? $num = $pages : $num = $pages - 1;
+        }
+        elseif ($_POST['action'] == 'increment'){
+            $pages == 42 ? $num = $pages : $num = $pages + 1;
+        }
     }
     echo '<form action="" method="post">';
     echo '<input type="hidden" name="num" value="'. $num .'" />';
+    array('1' => 'one', '2' => 'chaaim');
     foreach ($products as $key => $product) {
         if($key == $num) {
             echo "<p class='text-xl'> ID : " . $product->ProductID . '</p>';

@@ -9,26 +9,28 @@
         $length1 < 3 ? $usernameError = "กรุณากรอกชื่อผู้ใช้อย่างน้อย 3 ตัวอักษร" : $usernameError = "";
         $length3 < 8 ? $passwordError = "กรุณากรอกรหัสผ่านอย่างน้อย 8 ตัวอักษร" : $passwordError = "";
     
-        if ($usernameError || $nameError || $passwordError) {
+        if ($usernameError || $passwordError) {
             session_start();
             $_SESSION['usernameError'] = $usernameError;
             $_SESSION['passwordError'] = $passwordError;
             $_SESSION['username'] = $_POST['username'];
             $_SESSION['password'] = $_POST['password'];
         } else {
-            session_start();
+            unset($_SESSION['password'], $_SESSION['usernameError'], $_SESSION['passwordError']);
             session_destroy();
             $sql ="SELECT * FROM users WHERE user_name = '{$_POST['username']}' and password = '{$_POST['password']}'";
             $ret = $db->query($sql);
             $row = $ret->fetchArray(SQLITE3_ASSOC);
-            if (!$row) {
+            if ($row == 0) {
                 $loginError = "ยืนยันตัวตนไม่ถูกต้อง";
             }
-            session_start();
-            $_SESSION['user_id'] = $row['user_id'];
-            $_SESSION['user_name'] = $row['user_name'];
-            $_SESSION['name'] = $row['name'];
-            header("Location: ./index.php");
+            else {
+                session_start();
+                $_SESSION['user_id'] = $row['user_id'];
+                $_SESSION['user_name'] = $row['user_name'];
+                $_SESSION['name'] = $row['name'];
+                header("Location: ./index.php");
+            }
         }
     }
 ?>

@@ -5,6 +5,7 @@
         header('Location:./login.php');
     }
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            echo '<script>alert("คุณต้องการลบ' . $_POST['row'] . 'หรือไม่")</script>';
             $sql = <<<EOF
                 DELETE FROM users WHERE user_id = '{$_POST['row']}';
             EOF;
